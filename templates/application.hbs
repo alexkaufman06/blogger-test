@@ -1,0 +1,22 @@
+<div class="container">
+  <nav class='navbar navbar-default' role='navigation'>
+    <ul class='nav navbar-nav'>
+      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
+      <li>{{#link-to 'about'}}About{{/link-to}}</li>
+      <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+    </ul>
+    <ul class='nav navbar-nav navbar-right'>
+      <li>
+        <div {{action 'showSocial' on="mouseEnter"}}>
+            <h4>Social Media</h4>
+        </div>
+      </li>
+    </ul>
+  </nav>
+    {{#if isSocialShowing}}
+    <div class="social">
+      <p>It Worked</p>
+    </div>
+    {{/if}}
+  {{outlet}}
+</div>
